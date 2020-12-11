@@ -48,12 +48,15 @@
   }
 }
 
+.star_rating_holder {
+  display: flex;
+  align-items: baseline;
+}
+
 .starReview {
   color: #2f84ed;
-  display: inline-block;
   transform: translate(5px, -6px);
   font-family: "GothamRounded";
-  text-decoration: none;
   cursor: pointer;
   font-size: 12px;
   font-weight: bold;

@@ -1,5 +1,5 @@
 import SlickSlider from "../../common/slick-slider";
-import StarRating from "../../common/star-rating";
+import ReactStars from "../../common/star-rating";
 
 import styles from "./styles.module.scss";
 
@@ -9,7 +9,7 @@ const imgMock = [
   "/images/products/STCG/3.png",
 ];
 
-export default function PageContent() {
+const PageContent = () => {
   return (
     <header className={styles.intro}>
       <div className={styles.mainSection}>
@@ -19,7 +19,7 @@ export default function PageContent() {
         <div className={styles.description}>
           <h2 className={styles.title}>Storyteller’s Card Game</h2>
           <div className={styles.star_rating_holder}>
-            <StarRating />
+            <ReactStars />
             <p className={styles.starReview}>10 Reviews</p>
           </div>
           <p className={styles.price}>$29</p>
@@ -49,8 +49,8 @@ export default function PageContent() {
         </div>
       </div>
       <svg
-        class={styles.waveBottom}
-        viewbox="0 0 1280 107.37"
+        className={styles.waveBottom}
+        viewBox="0 0 1280 107.37"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -60,4 +60,6 @@ export default function PageContent() {
       </svg>
     </header>
   );
-}
+};
+
+export default PageContent;

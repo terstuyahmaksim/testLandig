@@ -1,0 +1,73 @@
+@import '../../../styles/variables.scss';
+
+.wrapper {
+  max-width: 1100px;
+  margin: 30px auto;
+  display: grid;
+  @media (min-width: $breakpoint-large) {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+.mediaBlock {
+  padding-right: 40%;
+  border-right-color: transparent;
+  padding-bottom: 3rem;
+  border: 7px solid $colour-white-dark;
+  background-color: $colour-white-dark;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+  justify-content: center;
+  padding: 3rem;
+  position: relative;
+  z-index: 5;
+
+  &:after {
+    left: 5rem;
+    right: -11rem;
+    transform: skewX(-6deg);
+    border: 7px solid $colour-white-dark;
+    height: 100%;
+    background-color: $colour-white-dark;
+    box-sizing: content-box;
+    content: "";
+    position: absolute;
+  }
+}
+
+.textBlock {
+  z-index: 6;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px;
+  margin: 50px 0;
+  border: 7px solid $colour-white-dark;
+  border-radius: 30px;
+  background-color: $colour-white;
+}
+
+.title {
+  font-family: $font-family-phosphate;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  font-size: 30px;
+  margin-bottom: 16px;
+}
+
+.text {
+  margin-bottom: 16px;
+  font-family: $font-family-gotham;
+  font-size: 14px;
+  line-height: 1.4;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "salt";
+  font-weight: $font-weight-normal;
+}
+
+.media {
+  z-index: 6;
+}
