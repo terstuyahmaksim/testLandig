@@ -1,0 +1,10 @@
+@import '../variables.scss';
+
+button.slick-prev:before,
+button.slick-next:before {
+  color: black;
+}
+
+ul.slick-dots li button:before {
+  font-size: 13px;
+}

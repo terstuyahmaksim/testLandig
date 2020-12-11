@@ -1,32 +1,51 @@
+@import '../../../styles/variables.scss';
+
 .intro {
   position: relative;
-  background-color: var(--colour-white-dark);
+  background-color: $colour-white-dark;
   min-width: 100%;
 
 }
 
 .mainSection {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 100%;
+
+  @media (min-width: $breakpoint-large) {
+    padding-top: 95px;
+    grid-template-columns: 50% 50%;
+    padding-bottom: 50px;
+  }
 }
 
 .description {
-  max-width: 620px;
+  padding: 20px;
+  @media (min-width: $breakpoint-large) {
+    max-width: 620px;
+  }
 }
 
 .slickWrapper {
-  max-width: 620px;
-  margin-left: auto;
-  margin-right: 60px;
+  max-width: 80vw;
+  margin: 0 auto;
+  @media (min-width: $breakpoint-large) {
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: 60px;
+  }
 }
 
 .title {
-  font-size: 30px;
+  font-size: 20px;
   font-weight: bold;
   font-family: "GothamRounded", helvetica, arial, sans-serif;
   letter-spacing: 0.05em;
   line-height: 1.2;
+  margin-top: 0;
   margin-bottom: 10px;
+  @media (min-width: $breakpoint-large) {
+    font-size: 30px;
+  }
 }
 
 .starReview {
@@ -41,10 +60,15 @@
 }
 
 .price {
+  padding: 13px 0;
+  font-size: 18px;
+
   font-family: "GothamRounded", helvetica, arial, sans-serif;
   font-weight: bold;
-  padding: 10px 0;
-  font-size: 25px;
+  @media (min-width: $breakpoint-large) {
+    padding: 10px 0;
+    font-size: 25px;
+  }
 }
 
 .textBold {
@@ -61,8 +85,7 @@
 }
 
 .listHolder {
-  list-style: disc outside;
-  font-size: 14px;
+  padding-left: 15px;
   margin-bottom: 25px;
 }
 
@@ -70,6 +93,8 @@
   font-family: "GothamRounded", helvetica, arial, sans-serif;
   font-feature-settings: "salt";
   font-weight: 300;
+  font-size: 11px;
+  list-style: disc;
 }
 
 .waveBottom {

@@ -1,12 +1,13 @@
-import '../styles/global.css';
-import '../styles/fonts.css';
-import '../styles/variables.css';
+import "../styles/reset.css";
+import "../styles/fonts.scss";
+import "../styles/variables.scss";
+import "../styles/global.scss";
 
-// --- common styles --- //
+// --- common component styles --- //
 
-import '../styles/common/buttons.css';
-import '../styles/common/slick.css';
+import "../styles/common/buttons.scss";
+import "../styles/common/slick.scss";
 
 export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return <Component {...pageProps} />;
 }
