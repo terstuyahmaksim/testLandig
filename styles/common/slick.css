@@ -1,0 +1,8 @@
+.slick-arrow .slick-prev:before,
+.slick-arrow .slick-next:before {
+  color: var(--colour-black) !important;
+  /* font-family: "icomoon"; */
+  /* font-size: 28px; */
+  line-height: 1;
+  opacity: .75;
+}
