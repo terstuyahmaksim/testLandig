@@ -45,6 +45,38 @@
   flex-direction: column;
   padding: 50px;
   margin: 50px 0;
+  border: 7px solid $colour-white-dark;
+  border-radius: 30px;
+  background-color: $colour-white-dark;
+
+  .imageWrapper {
+    position: relative;
+  }
+
+  .btnPlay {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .videoWrapper {
+    display: none;
+  }
+
+  .videoTrigger {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 150px;
+    cursor: pointer;
+
+    p {
+      font-size: 14px;
+      font-family: $font-family-bakso;
+      color: $colour-white;
+    }
+  }
 }
 
 .title {
