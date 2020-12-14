@@ -11,7 +11,7 @@ export default function Page() {
       </Head>
       <Header></Header> */}
       <PageContent></PageContent>
-      {/* <Footer></Footer> */}
+      <Footer></Footer>
     </div>
   );
 }
