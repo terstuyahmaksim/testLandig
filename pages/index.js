@@ -6,10 +6,10 @@ import Footer from "../components/common/footer";
 export default function Page() {
   return (
     <div id="wrapper">
-      {/* <Head>
+      <Head>
         <title>Some title</title>
       </Head>
-      <Header></Header> */}
+      <Header></Header>
       <PageContent></PageContent>
       <Footer></Footer>
     </div>
