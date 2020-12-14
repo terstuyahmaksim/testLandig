@@ -1,0 +1,79 @@
+@import '/styles/variables.scss';
+
+.container {
+  min-width: 100%;
+  background-color: $colour-grey-light-less;
+  padding: 65px;
+}
+
+.footer {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+
+.footerColumn {
+  flex-basis: auto;
+  flex-grow: 1;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: center;
+  width: 100%;
+
+  @media (min-width: $breakpoint-medium) {
+    text-align: left;
+    width: 33.3333%;
+  }
+
+  @media (min-width: $breakpoint-medium-large) {
+    width: 20%;
+  }
+}
+
+.footerNav {
+  margin-top: 1.5rem;
+
+
+  @media (min-width: $breakpoint-medium) {
+    margin-top: 0;
+
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+  }
+
+  h4 {
+    margin-bottom: 1rem;
+  }
+
+  h5 {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  li {
+    font-size: 14px;
+  }
+}
+
+.footerMenuHeader {
+  font-family: $font-family-phosphate;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  font-size: 16px;
+}
+
+.footerList {
+
+  li > a,
+  li > span {
+    color: $colour-black;
+    text-decoration: none;
+    font-weight: $font-weight-normal;
+    display: inline-block;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    font-family: $font-family-gotham;
+    font-feature-settings: "salt";
+    font-size: 16px;
+  }
+}

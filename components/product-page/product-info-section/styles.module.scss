@@ -7,9 +7,11 @@
   font-family: $font-family-gotham;
   display: grid;
   grid-template-columns: 50% 50%;
+  padding-bottom: 30px;
 
   @media (min-width: $breakpoint-large) {
     grid-template-columns:  25% 25%25% 25%;
+    padding-bottom: 50px;
   }
 }
 
