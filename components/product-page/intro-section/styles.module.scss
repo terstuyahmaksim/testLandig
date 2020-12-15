@@ -19,7 +19,11 @@
 }
 
 .description {
-  padding: 20px;
+  padding: 20px 20px 55px;
+
+  @media (min-width: $breakpoint-medium-large) {
+    padding: 20px;
+  }
   @media (min-width: $breakpoint-large) {
     max-width: 620px;
   }
