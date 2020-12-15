@@ -3,51 +3,68 @@
 .wrapper {
   max-width: 1100px;
   margin: 30px auto;
-  display: grid;
 
-  @media (min-width: $breakpoint-large) {
+  @media (min-width: $breakpoint-medium-large) {
     grid-template-columns: 50% 50%;
+    display: grid;
   }
 }
 
 .mediaBlock {
-  // padding-right: 40%;
-  // padding-bottom: 3rem;
   border: 7px solid $colour-white-dark;
   background-color: $colour-white-dark;
-  border-right: none;
   box-sizing: border-box;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  height: 100%;
-  padding: 3rem;
+  align-items: center;
+  padding: 2rem;
   position: relative;
-  z-index: 5;
+  z-index: -1;
+  margin: 0 1rem;
+
+  @media (min-width: $breakpoint-medium-large) {
+    padding: 3rem;
+    border-right-color: transparent;
+    margin: 0;
+  }
 
   &:after {
-    left: 5rem;
-    right: -11rem;
-    transform: skewX(-6deg);
+    content: "";
+    position: absolute;
+    left: -7px;
+    right: -7px;
+    top: 50px;
+    transform: skewY(6deg);
     border: 7px solid $colour-white-dark;
     height: 100%;
     background-color: $colour-white-dark;
     box-sizing: content-box;
-    content: "";
-    position: absolute;
+
+    @media (min-width: $breakpoint-medium-large) {
+      left: 5rem;
+      right: -11rem;
+      transform: skewX(-6deg);
+      top: -7px;
+    }
   }
 }
 
 .textBlock {
-  z-index: 6;
+  z-index: 999;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 50px;
-  margin: 50px 0;
+  padding: 1.5rem;
+  margin: -20px 1.5rem 0 ;
   border: 7px solid $colour-white-dark;
   border-radius: 30px;
   background-color: $colour-white;
+
+  @media (min-width: $breakpoint-medium-large) {
+    padding: 50px;
+    margin: 50px 0;
+  }
 }
 
 .title {
@@ -55,18 +72,32 @@
   font-weight: $font-weight-bold;
   letter-spacing: 0.01em;
   line-height: 1;
-  font-size: 30px;
+  font-size: 18px;
   margin-bottom: 16px;
+
+  @media (min-width: $breakpoint-small) {
+    font-size: 21px;
+  }
+  @media (min-width: $breakpoint-medium-large) {
+    font-size: 30px;
+  }
 }
 
 .text {
   margin-bottom: 16px;
   font-family: $font-family-gotham;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.4;
   text-rendering: optimizeLegibility;
   font-feature-settings: "salt";
   font-weight: $font-weight-normal;
+
+  @media (min-width: $breakpoint-small) {
+    font-size: 13px;
+  }
+  @media (min-width: $breakpoint-medium-large) {
+    font-size: 14px;
+  }
 }
 
 .media {

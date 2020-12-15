@@ -13,58 +13,97 @@
 .textBlock {
   border: 7px solid $colour-white-dark;
   background-color: $colour-white;
-  border-right: none;
-  border-bottom: none;
+  border-top-color: transparent;
   box-sizing: border-box;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  padding: 3rem;
+  padding: 2rem;
   position: relative;
-  margin-right: 4rem;
+  margin: 6rem 1rem 0;
   z-index: 3;
+  order: 1;
+
+  @media (min-width: $breakpoint-small) {
+    margin-top: 8rem;
+  }
+  @media (min-width: $breakpoint-medium) {
+    margin-top: 10rem;
+  }
+  @media (min-width: $breakpoint-medium-large) {
+    border-right-color: transparent;
+    border-top-color: $colour-white-dark;
+    padding: 3rem;
+    margin: 0 4rem 0 0;
+    order: -1;
+  }
 
   &:after {
     display: block;
     border: 7px solid $colour-white-dark;
     content: "";
     position: absolute;
-    border-left-color: transparent;
-    top: -7px;
+    transform: skewY(6deg);
+    top: -11vw;
     bottom: 0;
-    left: .9rem;
-    height: auto;
-    right: -3.5rem;
-    transform: skewX(-6deg);
+    left: -7px;
+    height: 100%;
+    right: -7px;
+    border-bottom-color: transparent;
+
+    @media (min-width: $breakpoint-medium-large) {
+      transform: skewX(-6deg);
+      top: -7px;
+      bottom: -7px;
+      left: .9rem;
+      right: -3.5rem;
+      border-left-color: transparent;
+      border-bottom-color: $colour-white-dark;
+      border-bottom-color: $colour-white-dark;
+      height: auto;
+    }
   }
 }
 
 .mediaBlock {
   border: 7px solid #f2f2f2;
   background-color: #f2f2f2;
-  border-left: none;
+
   box-sizing: border-box;
-  display: -webkit-flex;
-  display: -moz-box;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  padding: 3rem;
+  padding: 2rem;
   position: relative;
-  margin-left: 4rem;
+  margin: 0 1rem;
+
+  @media (min-width: $breakpoint-medium-large) {
+    border-left-color: transparent;
+    padding: 3rem;
+    margin: 0 0 0 4rem;
+  }
 
   &:after {
-    border-right-color: transparent;
-    left: -3.5rem;
-    right: 0;
-    bottom: -7px;
-    transform: skewX(-6deg);
+    transform: skewY(6deg);
     content: "";
     position: absolute;
-    width: 100%;
+    height: 100%;
     z-index: 0;
-    top: -7px;
+    left: -7px;
+    right: -7px;
+    top: 10vw;
     background-color: #f2f2f2;
+
+    @media (min-width: $breakpoint-medium-large) {
+      transform: skewX(-6deg);
+      border-right-color: transparent;
+      top: -7px;
+      left: -3.5rem;
+      right: 0;
+      bottom: -7px;
+      width: 100%;
+      height: auto;
+    }
   }
 
   .media {
@@ -79,8 +118,15 @@
   font-weight: $font-weight-bold;
   letter-spacing: 0.01em;
   line-height: 1;
-  font-size: 30px;
+  font-size: 21px;
   margin-bottom: 16px;
+
+  @media (min-width: $breakpoint-small) {
+    font-size: 26px;
+  }
+  @media (min-width: $breakpoint-medium-large) {
+    font-size: 30px;
+  }
 }
 
 .text {

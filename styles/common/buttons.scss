@@ -4,21 +4,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 29px;
-  width: 180px;
-
+  align-self: center;
+  padding: 7px;
+  width: 100%;
   border: none;
   background: $colour-black-absolute;
   border-radius: 7px;
   box-shadow: -3px 3px 0 rgba(0, 0, 0, 0.25);
   color: $colour-white;
-
   font-family: "PhosphateSolid", helvetica, arial, sans-serif;
   font-size: 15px;
   line-height: 1;
   text-decoration: none;
   letter-spacing: 0.9px;
   cursor: pointer;
+
+  @media (min-width: $breakpoint-small) {
+    width: 180px;
+  }
 }
 
 @media (min-width: 800px) {
@@ -44,5 +47,7 @@
 
 
 .button--long {
-  width: 320px;
+  @media (min-width: $breakpoint-medium) {
+    width: 320px;
+  }
 }
