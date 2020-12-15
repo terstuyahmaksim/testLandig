@@ -9,19 +9,25 @@ export default function Footer() {
             <h4 className={styles.footerMenuHeader}>About Us</h4>
             <ul className={styles.footerList}>
               <li>
-                <a href="/pages/about">Who we are</a>
+                <a href="https://www.mrswordsmith.com/pages/about">
+                  Who we are
+                </a>
               </li>
               <li>
-                <a href="/pages/reviews">Customer reviews</a>
+                <a href="https://www.mrswordsmith.com/pages/reviews">
+                  Customer reviews
+                </a>
               </li>
               <li>
-                <a href="/pages/press">Press</a>
+                <a href="https://www.mrswordsmith.com/pages/press">Press</a>
               </li>
               <li>
-                <a href="/pages/team">Meet the team</a>
+                <a href="https://www.mrswordsmith.com/pages/team">
+                  Meet the team
+                </a>
               </li>
               <li>
-                <a href="/pages/careers">Careers</a>
+                <a href="https://www.mrswordsmith.com/pages/careers">Careers</a>
               </li>
             </ul>
           </div>
@@ -46,12 +52,18 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a className={styles.nowrap} href="/pages/privacy">
+                <a
+                  className={styles.nowrap}
+                  href="https://www.mrswordsmith.com/pages/privacy"
+                >
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a className={styles.nowrap} href="/pages/terms-and-conditions">
+                <a
+                  className={styles.nowrap}
+                  href="https://www.mrswordsmith.com/pages/terms-and-conditions"
+                >
                   Terms &amp; Conditions
                 </a>
               </li>
